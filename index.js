@@ -7,7 +7,10 @@ var path = require('path');
 // such a pain.
 require('app-module-path').addPath(path.join(__dirname, 'node_modules'));
 
-var ae = require('after-effects-transpiled');
+// we need to grab from after-effects-transpiled since the original author did not 
+// transpile their module :(
+// such a pain :(
+var ae = require('./after-effects-transpiled');
 var aeToJSON = require('ae-to-json/after-effects');
 
 ae.execute(aeToJSON)
